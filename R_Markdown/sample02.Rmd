@@ -1,0 +1,63 @@
+---
+title: "サンプル・レポート"
+author: "Taguchi"
+date: '`r format(Sys.time(), "%Y/%m/%d %H:%M")`'
+output:
+  word_document:
+    fig_caption: yes
+    reference_docx: default
+    toc: yes
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    pandoc_args:
+    - --from
+    - markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures
+    theme: default
+    toc: yes
+    toc_depth: 3
+---
+```{r setup, include=FALSE}
+library(ggplot2)      # Graphic package
+library(knitr)        # markdown
+
+options(scipen=100)
+
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(tidy = TRUE)
+knitr::opts_chunk$set(warning = TRUE)
+knitr::opts_chunk$set(error = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+
+
+Sys.setenv(tz="asia/tokyo")
+
+```
+
+#Markdownサンプル
+##本文
+
+行内へのRコード埋め込み
+
+今日は `r format(Sys.Date(), "%Y/%m/%d")` です
+
+箇条書き
+
+* 箇条書き1
+* 箇条書き2
+
+
+## グラフ
+サンプルデータ(diamond)の箱ひげ図を表示
+
+```{r}
+graph_data <- ggplot(diamonds, aes(y=carat,x=cut, fill=cut))+geom_boxplot()
+plot(graph_data)
+
+```
+
+##リンク
+[R Markdown](http://rmarkdown.rstudio.com/)
+
+

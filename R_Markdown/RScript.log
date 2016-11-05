@@ -1,0 +1,25 @@
+
+
+processing file: sample03.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |.............                                                    |  20%
+   inline R code fragments
+
+  |                                                                         |..........................                                       |  40%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.......................................                          |  60%
+   inline R code fragments
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-1
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: sample03.knit.md
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS sample03.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output sample03_out.html --smart --email-obfuscation none --self-contained --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\x\R\R-3.3.1\library\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\IBM_AD~1\AppData\Local\Temp\RtmpyMBiXH\rmarkdown-str21a851886e96.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\x\R\R-3.3.1\library\rmarkdown\rmd\h\highlight" --variable "navigationjs=C:\x\R\R-3.3.1\library\rmarkdown\rmd\h\navigation-1.1" 
+
+Output created: sample03_out.html

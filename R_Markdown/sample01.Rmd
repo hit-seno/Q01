@@ -1,0 +1,40 @@
+---
+title: "サンプル・レポート"
+author: "Taguchi"
+date: '`r format(Sys.time(), "%y/%m/%d %H:%M")`'
+output:
+  html_document:
+    toc: yes
+  word_document:
+    toc: yes
+---
+```{r setup, include=FALSE}
+library(ggplot2)        # Graphic package
+
+``` 
+
+#Markdownサンプル
+##本文
+
+行内へのRコード埋め込み
+
+今日は `r format(Sys.Date(), "%Y/%m/%d")` です
+
+箇条書き
+
+* 箇条書き1
+* 箇条書き2
+
+
+## グラフ
+サンプルデータ(diamond)の箱ひげ図を表示
+
+```{r}
+graph_data <- ggplot(diamonds, aes(y=carat,x=cut, fill=cut))+geom_boxplot()
+plot(graph_data)
+
+```
+
+##リンク
+[R Markdown](http://rmarkdown.rstudio.com/)
+
